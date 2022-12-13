@@ -1,0 +1,4 @@
+use usuario
+
+db.insert.usuario({nome: "thiago", idade: 21;})
+db.usuario.find({})

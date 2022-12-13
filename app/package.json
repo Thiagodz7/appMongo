@@ -1,0 +1,14 @@
+{
+    "name": "app-front-end",
+    "version": "1.0.0",
+    "description": "treinamento infra",
+    "main": "app.js",
+    "scripts": {
+        "teste": "echo exit 1"
+    },
+    "author": "Thiago Rodrigues",
+    "license": "ISC",
+    "dependencies": {
+        "express": "4.17.1"
+    }
+}
