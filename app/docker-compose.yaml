@@ -1,7 +1,7 @@
-version: "3.9"
+version: "3.3"
 services: 
   app:
-    container_name: app-container 
+    container_name: app-container
     image: thiagodz7/app-mongo:1.0
     networks:
       - app-sisaud-network
@@ -9,13 +9,13 @@ services:
       - "3000:3000"
     volumes: 
        - type: bind
-         source: /root/appmongo/app/logs
+         source: /root/appMongo/app/logs
          target: /usr/src/app/logs
     depends_on: 
       - mongo_db
   mongo_db:
      container_name: mongo-container
-     image: thiagodz7/mongo
+     image: mongo:6.0.3
      networks:
        - app-sisaud-network
      ports:
@@ -27,7 +27,7 @@ services:
         MONGO_INITDB_ROOT_PASSWORD: 123
      volumes:
          - type: bind
-           source: /root/appmongo/mongo/mongo-volumes
+           source: /root/appMongo/mongo/vol-mongo
            target: /var/lib/mongo
 networks:
   app-sisaud-network:
