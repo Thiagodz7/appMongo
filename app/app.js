@@ -16,7 +16,7 @@ app.get("/",async (req, res) => {
             logStrem.write('\n');
 
             const connection = () => MongoClient
-                      .connect("mongodb://adm:123@localhost:27017", 
+                      .connect("mongodb://adm:123@172.20.0.2:27017", 
                                 {
                                   useNewUrlParser: true,
                                   useUnifiedTopology: true
